@@ -1,0 +1,288 @@
+.search-section{
+    height: 25vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    // background-image: url(https://resizer.otstatic.com/v2/photos/wide-huge/25161502.jpg);
+    background-image: url(https://cdn.otstatic.com/mobileweb/mobile-web-frontend/images/black-pattern.png);
+}
+
+.search-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8px 0;
+    background-color: white;
+    width: 80%;
+    height: 3.5vh;
+    color: white;
+}
+
+.search-icon{
+    width: 10%;
+    color: $brand-color;
+    text-align: center;
+}
+
+.search-icon-restaurant{
+    display: none;
+}
+
+.search-title{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.search-input{
+    width: 90%;
+    height: 80%;
+    border: none;
+    outline: none;
+}
+
+.search-type,
+.search-price,
+.search-button{
+    display: none;
+}
+
+.search-list-inputs{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    > :not(:last-child){
+        margin-right: 25px;
+    }
+}
+
+.search-anchor{
+    padding-left: .5rem;
+}
+
+.search-select{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    appearance: none;
+    border-radius: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.search-down-icon{
+    margin-left: 1.5rem;
+    vertical-align: middle;
+}
+
+.section-padding{
+    padding: 15px 0;
+}
+
+.restaurant-card{
+    box-shadow: 0 1px 1px 0 rgba(51,51,51,.3);
+    width: 250px;
+    border-radius: 6px;
+    background-color: white;
+
+    img{
+        height: 140px;
+        width: 250px;
+    }
+
+    .star-review{
+        font-size: 10px;
+        vertical-align: middle;
+        font-weight: 400;
+        color: red;
+    }
+}
+
+.restaurant-info{
+    padding: 10px;
+}
+
+.restaurant-list{
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 30px;
+
+    > :not(:last-child){
+        margin-right: 25px;
+    }
+}
+
+.restaurant-list-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 15px;
+
+    h5{
+        a{
+            color: orange;
+            text-decoration: none;
+        }
+    }
+}
+
+.recommendation-card{
+    border: black solid 0.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    color: white;
+    background-color: brown;
+    text-align: center;
+
+    p{
+        margin: 5px 0;
+    }
+
+    button{
+        margin: 5px 0;
+        color: white;
+        background-color: $recommendation-button;
+        width: 50%;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 5px 5px 3px rgba(51,51,51,.3);
+        height: 34px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .restaurant-list{
+        max-width: 80vw;
+        margin: auto;
+        overflow-x: auto;
+    }
+
+    .restaurant-list-title{
+        max-width: 80vw;
+        margin: auto;
+    }
+
+    .search-section{
+        height: 48vh;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        background-image: linear-gradient(rgba(99, 88, 88, 0.5), rgba(99, 88, 88, 0.5)),url(https://resizer.otstatic.com/v2/photos/wide-huge/25161502.jpg);
+    }
+
+    .search-box{
+        width: 30%;
+    }
+
+    .search-icon{
+        display: none;
+    }
+
+    .search-icon-restaurant{
+        display: inline-block;
+        width: 10%;
+        color: $brand-color;
+        text-align: center;
+    }
+    
+    .search-input{
+        width: 90%;
+        height: 80%;
+        border: none;
+        outline: none;
+    }
+
+    .search-type{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        height: 3.5vh;
+        padding: 8px 15px;
+        flex-direction: row-reverse;
+        position: relative;
+
+        &:after{
+            content: '';
+            background-size: contain;
+            background-position: center center; 
+            background-repeat: no-repeat; 
+            display: inline-block;
+            background-image: url(../img/pepper-hot-solid.svg);
+            width: 20px;
+            height: 20px;
+            color: $brand-color;
+        }
+    }
+
+    .search-price{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        height: 3.5vh;
+        padding: 8px 15px;
+        flex-direction: row-reverse;
+        position: relative;
+
+        &:after{
+            content: '';
+            background-size: contain;
+            background-position: center center; 
+            background-repeat: no-repeat; 
+            display: inline-block;
+            background-image: url(../img/dollar-sign-solid.svg);
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .search-button{
+        height: 100%;
+        width: 12vw;
+        background: orange;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        span{
+            margin-right: .5rem;
+        }
+
+        &:after{
+            content: '';
+            background-size: contain;
+            background-position: center center; 
+            background-repeat: no-repeat; 
+            display: inline-block;
+            background-image: url(../img/search-solid.svg);
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+        }
+    }
+}

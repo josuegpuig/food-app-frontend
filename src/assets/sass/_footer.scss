@@ -1,0 +1,41 @@
+.footer{
+    background-color: gray;
+    padding-top: 15px;
+
+    hr{
+        margin: 15px 0;
+    }
+}
+
+.footer-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-links-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.6rem;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.footer-links-social{
+    display: flex;
+    width: 30%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    img{
+        height: 50px;
+    }
+}
+
+.footer-copyrights{
+    padding-bottom: 15px;
+}

@@ -1,0 +1,37 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: $brand-color;
+}
+
+.nabvar-section-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 14%;
+}
+
+.nabvar-section-navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // width: 15%;
+    // padding-right: 50px;
+    
+    @include media-breakpoint-up(sm) {
+        width: 235px;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+
+        &.login-link {
+            padding-left: 26px;
+        }
+    }
+}
