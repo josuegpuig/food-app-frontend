@@ -1,0 +1,31 @@
+//COLORES
+$primary-color-background: #FFFFFF;
+$primary-text-color: #212121; 
+$header-color: aqua;
+$background-login: #BDBDBD;
+//TIPOGRAFÍA
+$text-background: 'Roboto', sans-serif;
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    background-color: $background-login;
+    // font-family: $text-background;
+    &-email{
+        margin-bottom: 10px;
+        align-items: center;
+      }
+    &-input{
+        width: 98%;
+      }
+    &-error{
+        p{
+            margin: 0px;
+        }
+    }
+  }
+
+
+
